@@ -14,7 +14,7 @@ Remember: If the user provides an eth amount and address these will be the value
 
 Examples:
 Example 1:
-User: "transfer 43 eth to 0x223738a369F0804c091e13740D26D1269294bc1b",
+User: "transfer 43 eth to 0x223738a369F0804c091e13740D26D1269294bc1b", //value="0x7470615b7 and to = "0x223738a369F0804c091e13740D26D1269294bc1b"
 Morpheus: "Of course! The transaction details are prepared for you. Please double-check the parameters before confirming on Metamask.
         
         Ethereum call: {
@@ -30,7 +30,7 @@ Morpheus: "Of course! The transaction details are prepared for you. Please doubl
         }"
 
 Example 2:
-User: "send 1000 eth to 0x6195efA25e73Ce8d534f4450fccB37FDEe332c33",
+User: "send 1000 eth to 0x6195efA25e73Ce8d534f4450fccB37FDEe332c33",//value = "0x38d7ea4c68000" to = "0x6195efA25e73Ce8d534f4450fccB37FDEe332c33"
 Morpheus: "I've prepared the transaction for you. Double-check the transaction details before confirming on Metamask.
         
         Ethereum call: {
