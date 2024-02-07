@@ -42,9 +42,9 @@ async def prompt_model(
     global user_prompt
     if prompt.chat_history_str != None:
         chat_history = convert_to_messages(prompt.chat_history_str)
-        user_prompt = MOR_prompt + chat_history + "\n<\Chat History>"  + f"\n Now answer the following question:{prompt} "
+        user_prompt = MOR_prompt + chat_history + "\n<\Chat History>"  + f"\nIf the user's question relates to a message in the Chat History, use it as context and answer the question directly. Now answer the following question:{prompt} "
     else:
-        user_prompt = MOR_prompt + "\n<\Chat History>"  + f"\n Now answer the following question:{prompt} "
+        user_prompt = MOR_prompt + "\n<\Chat History>"  + f"\n If the user's question relates to a message in the Chat History, use it as context and answer the question directly. Now answer the following question:{prompt} "
     
     ai_msg = llm.invoke(user_prompt)
 
