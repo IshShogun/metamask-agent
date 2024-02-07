@@ -44,7 +44,7 @@ async def prompt_model(
         chat_history = convert_to_messages(prompt.chat_history_str)
         user_prompt = MOR_prompt + chat_history + "\n<\Chat History>"  + f"\nQuestion:{prompt} "
     else:
-        user_prompt = MOR_prompt + "\n<\Chat History>"  + f"\n Now assist with the following:{prompt} "
+        user_prompt = MOR_prompt + "\n<\Chat History>"  + f"\n If a transaction is not initiated respond conversationally. Now assist with the following:{prompt} "
     
     ai_msg = llm.invoke(user_prompt)
 
