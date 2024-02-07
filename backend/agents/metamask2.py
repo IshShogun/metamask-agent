@@ -1,10 +1,9 @@
 from langchain_core.messages import AIMessage, HumanMessage
 from langchain_community.llms import Ollama
 from langchain_core.output_parsers import StrOutputParser
-chat_history = [{"human": "hello world", "ai": "Hello There!"}]
 
 llm = Ollama(model="llama2")
-formatted_chat_history = "\n".join([f'Human: {entry["human"]}\nAI: {entry["ai"]}' for entry in chat_history])
+
 
 MOR_prompt = """
 Task:
@@ -56,7 +55,5 @@ Answer: "stETH stands for staked Ether. It's a type of cryptocurrency. When peop
 
 <Chat History>
 """ 
-
-MOR_prompt = MOR_prompt + formatted_chat_history + "\n<\Chat History>"
 
 

@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from utils.models import TransactionRequest, ModelInference, Prompt
 from utils.functions import convert_to_messages
-from agents.metamask import rag_chain
+#from agents.metamask import rag_chain
 from agents.metamask2 import MOR_prompt, llm
 import re
 import json
@@ -42,7 +42,7 @@ async def prompt_model(
     global user_prompt
     if prompt.chat_history_str != None:
         chat_history = convert_to_messages(prompt.chat_history_str)
-        user_prompt = MOR_prompt + chat_history + "\n<\Chat History>"  + f"\nQuestion:{prompt} "
+        user_prompt = MOR_prompt + chat_history + "\n<\Chat History>"  + f"\n Now answer the following question:{prompt} "
     else:
         user_prompt = MOR_prompt + "\n<\Chat History>"  + f"\n Now answer the following question:{prompt} "
     
