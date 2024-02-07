@@ -12,7 +12,7 @@
     <div class="metamask-button-container">
       <MetaMaskButton @click="connectToMetamask"></MetaMaskButton>
     </div>
-    <button @click="sendTransaction"></button>
+   <!-- <button @click="sendTransaction"></button>-->
   </div>
 </template>
 
